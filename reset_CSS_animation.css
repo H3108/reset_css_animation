@@ -545,12 +545,23 @@
   }
 }
 
-/* scale从内向外扩展 */
-.scale {
-  -webkit-animation-name: scale;
-  animation-name: scale;
+
+/* 
+@ scaleIn扩展
+@ scaleIn,scaleXIn,scaleYIn
+@ 
+@ 扩展方向效果 从内向外
+@ 扩展方向效果 向左右
+@ 扩展方向效果 向上下
+*/
+
+
+/* scaleIn从内向外扩展 */
+.scaleIn {
+  -webkit-animation-name: scaleIn;
+  animation-name: scaleIn;
 }
-@keyframes scale {
+@keyframes scaleIn {
   from {
     opacity: 0;
     -webkit-transform: scale(0);
@@ -563,7 +574,7 @@
     transform: scale(1);
   }
 }
-@-webkit-keyframes scale {
+@-webkit-keyframes scaleIn {
   from {
     opacity: 0;
     -webkit-transform: scale(0);
@@ -577,12 +588,12 @@
   }
 }
 
-/* scaleX向左右扩展 */
-.scaleX {
-  -webkit-animation-name: scaleX;
-  animation-name: scaleX;
+/* scaleXIn向左右扩展 */
+.scaleXIn {
+  -webkit-animation-name: scaleXIn;
+  animation-name: scaleXIn;
 }
-@keyframes scaleX {
+@keyframes scaleXIn {
   from {
     opacity: 0;
     -webkit-transform: scaleX(0);
@@ -595,7 +606,7 @@
     transform: scaleX(1);
   }
 }
-@-webkit-keyframes scaleX {
+@-webkit-keyframes scaleXIn {
   from {
     opacity: 0;
     -webkit-transform: scaleX(0);
@@ -609,12 +620,12 @@
   }
 }
 
-/* scaleY向上下扩展 */
-.scaleY {
-  -webkit-animation-name: scaleY;
-  animation-name: scaleY;
+/* scaleYIn向上下扩展 */
+.scaleYIn {
+  -webkit-animation-name: scaleYIn;
+  animation-name: scaleYIn;
 }
-@keyframes scaleY {
+@keyframes scaleYIn {
   from {
     opacity: 0;
     -webkit-transform: scaleY(0);
@@ -627,7 +638,7 @@
     transform: scaleY(1);
   }
 }
-@-webkit-keyframes scaleY {
+@-webkit-keyframes scaleYIn {
   from {
     opacity: 0;
     -webkit-transform: scaleY(0);
@@ -638,6 +649,111 @@
     opacity: 1;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
+  }
+}
+
+/* 
+@ scaleOut收缩
+@ scaleOut,scaleXOut,scaleYOut
+@ 
+@ 收缩方向效果 从内向外
+@ 收缩方向效果 向左右
+@ 收缩方向效果 向上下
+*/
+
+/* scaleOut从外向内收缩 */
+.scaleOut {
+  -webkit-animation-name: scaleOut;
+  animation-name: scaleOut;
+}
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes scaleOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scaleX(0);
+  }
+}
+
+/* scaleXOut向左右收缩 */
+.scaleXOut {
+  -webkit-animation-name: scaleXOut;
+  animation-name: scaleXOut;
+}
+@keyframes scaleXOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+}
+@-webkit-keyframes scaleXOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+}
+
+/* scaleYOut向上下收缩 */
+.scaleYOut {
+  -webkit-animation-name: scaleYOut;
+  animation-name: scaleYOut;
+}
+@keyframes scaleYOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+@-webkit-keyframes scaleYOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
   }
 }
 
